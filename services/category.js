@@ -2,7 +2,11 @@ import { Category } from '../model/category.js'
 import { Product } from '../model/product.js'
 
 export const GetAllCategoriesService = async () => {
-  return await Category.findAll()
+  const category = Category.findAll()
+  if (!category || category.length === 0) {
+    return { error: 'There are not categories registered' }
+  }
+  return category
 }
 export const GetProductsInCategoryService = async (categoryId) => {
   const categoryFound = await Category.findByPk(categoryId)
