@@ -1,19 +1,19 @@
 import express from 'express'
 import {
-  getAllCategories,
-  getProductsInCategory,
+  GetAllCategories,
+  GetProductsInCategory,
   AddNewCategory,
-  updateCategory,
-  deleteCategory
+  UpdateCategory,
+  DeleteCategory
 } from '../controller/category.js'
 
 const router = express.Router()
 
 router
-  .get('/', getAllCategories)
-  .get('/:categoryId', getProductsInCategory)
+  .get('/', GetAllCategories)
+  .get('/:categoryId', GetProductsInCategory)
   .post('/', AddNewCategory)
-  .put('/:categoryId', updateCategory)
-  .delete('/:categoryId', deleteCategory)
+  .put('/:categoryId', UpdateCategory)
+  .delete('/:categoryId', DeleteCategory)
 
 export default router
