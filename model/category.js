@@ -10,7 +10,8 @@ export const Category = sequelize.define('category', {
   name: {
     type: DataTypes.STRING,
     allowNull: false,
-    required: true
+    required: true,
+    unique: true
   },
   description: String
 })

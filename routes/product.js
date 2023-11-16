@@ -1,19 +1,19 @@
 import express from 'express'
 import {
-  getAllProducts,
-  getProductById,
+  GetAllProducts,
+  GetProductById,
   AddNewProduct,
-  updateProduct,
-  deleteProduct
+  UpdateProduct,
+  DeleteProduct
 } from '../controller/product.js'
 
 const router = express.Router()
 
 router
-  .get('/', getAllProducts)
-  .get('/:productId', getProductById)
+  .get('/', GetAllProducts)
+  .get('/:productId', GetProductById)
   .post('/', AddNewProduct)
-  .put('/:productId', updateProduct)
-  .delete('/:productId', deleteProduct)
+  .put('/:productId', UpdateProduct)
+  .delete('/:productId', DeleteProduct)
 
 export default router

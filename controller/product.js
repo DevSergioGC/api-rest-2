@@ -1,5 +1,5 @@
-export const getAllProducts = () => {}
-export const getProductById = () => {}
+export const GetAllProducts = () => {}
+export const GetProductById = () => {}
 export const AddNewProduct = () => {}
-export const updateProduct = () => {}
-export const deleteProduct = () => {}
+export const UpdateProduct = () => {}
+export const DeleteProduct = () => {}
