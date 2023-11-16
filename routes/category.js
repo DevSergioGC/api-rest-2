@@ -3,17 +3,17 @@ import {
   getAllCategories,
   getProductsInCategory,
   AddNewCategory,
-  updateCategoryt,
-  deleteCategoryt
-} from '../controllers/category.js'
+  updateCategory,
+  deleteCategory
+} from '../controller/category.js'
 
-const router = express.Router() ===
+const router = express.Router()
 
 router
   .get('/', getAllCategories)
   .get('/:categoryId', getProductsInCategory)
   .post('/', AddNewCategory)
-  .put('/:categoryId', updateCategoryt)
-  .delete('/:categoryId', deleteCategoryt)
+  .put('/:categoryId', updateCategory)
+  .delete('/:categoryId', deleteCategory)
 
 export default router
